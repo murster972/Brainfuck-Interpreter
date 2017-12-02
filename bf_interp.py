@@ -52,8 +52,8 @@ class BrainfuckInterpeter:
 
             elif c == ">": cell_i += 1
             elif c == "<": cell_i -= 1
-            elif c == "+": self.cells[cell_i] += 1
-            elif c == "-": self.cells[cell_i] -= 1
+            elif c == "+": self.cells[cell_i] = self.cells[cell_i] + 1 if self.cells[cell_i] < 255 else 0
+            elif c == "-": self.cells[cell_i] = self.cells[cell_i] - 1 if self.cells[cell_i] > 0 else 255
             elif c == ".": print(chr(self.cells[cell_i]), end="")
             elif c == ",": self.cells[cell_i] = self.__get_char()
             i += 1
