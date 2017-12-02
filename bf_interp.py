@@ -72,7 +72,7 @@ class BrainfuckInterpeter:
             i += inc
         return i if b == "[" else i + 1
 
-    def __get_char():
+    def __get_char(self):
         c = input()
         return 0 if len(c) == 0 else ord(c[0])
 
